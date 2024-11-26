@@ -1,7 +1,7 @@
 import { PROD } from "@/consts/environment";
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
 
-const baseURL = PROD ? "PROD_LINK_TODO" : "http://localhost:3000/";
+const baseURL = PROD ? import.meta.env.VITE_SERVER_URL : "http://localhost:3000/";
 
 const config: AxiosRequestConfig = {
   baseURL,
